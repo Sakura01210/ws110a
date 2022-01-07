@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+table{
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(187,212,61,0.2);
+    border-collapse:collapse ;
+    color: rgba(68, 67, 67, 0.8);
+}
+th{
+    padding: 20px;
+    background-color: rgba(244,240,165,0.5);
+    color: #716746
+}
+tr:nth-child(even){
+    background-color: rgba(170, 125, 65, 0.5);
+}
+h1{
+    text-align: center; 
+    border-bottom: 8px dotted #89B3A4
+}
+a {
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}

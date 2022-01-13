@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+
+<script src="dice.js"></script>
+<script>
+//建立物件直接呼叫建構子
+var dice01 = new Dice();
+dice01.num = 1;
+var dice02 = new Dice();
+dice02.num = 2;
+
+function playDice(){
+dice01.play();
+dice02.play();
+console.log("dice01 = " + dice01.num);
+console.log("dice02 = " + dice02.num);
+
+var obj;
+obj = document.getElementById("div01");
+obj.innerHTML = dice01.num;
+obj = document.getElementById("div02");
+obj.innerHTML = dice02.num;
+}
+</script>
+<style>
+div{
+float:left;
+width:200px;
+height:200px;
+border: solid 2px #000000;}
+</style>
+</head>
+
+<body>
+<input type="button" name="button" id="button" value="play" onClick="playDice();">
+<div id="div01">
+<p>1</p>
+</div>
+<div id="div02">
+<p>2</p>
+</div>
+</body>
+</html>

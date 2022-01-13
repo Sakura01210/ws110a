@@ -6,7 +6,7 @@ app.use(async (ctx) => {
   console.log('path=', ctx.request.url.pathname)
   await send(ctx, ctx.request.url.pathname, {
     // root: `${Deno.cwd()}/public/`,
-    root: Deno.cwd()+'/public/',
+    root: Deno.cwd()+'/game/',
     index: "index.html",
   });
 });

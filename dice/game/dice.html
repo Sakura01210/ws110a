@@ -1,46 +1,41 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>無標題文件</title>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
 
-<script src="dice.js"></script>
-<script>
-//建立物件直接呼叫建構子
-var dice01 = new Dice();
-dice01.num = 1;
-var dice02 = new Dice();
-dice02.num = 2;
+        <title>骰子遊戲</title>
+    </head>
 
-function playDice(){
-dice01.play();
-dice02.play();
-console.log("dice01 = " + dice01.num);
-console.log("dice02 = " + dice02.num);
+    <body>
+        <div class="container clearfix">
+            <div class="panel-1 active">
+                <div class="player">玩家 1</div>
+				           <img src="Trophy.png" class="winner1">
+                <div class="score" id="player1Score">0</div>
+                <div class="box">
+                    <div class="label">分數</div>
+                    <div class="totalScore" id="total1Score">0</div>
+                </div>
+            </div>
 
-var obj;
-obj = document.getElementById("div01");
-obj.innerHTML = dice01.num;
-obj = document.getElementById("div02");
-obj.innerHTML = dice02.num;
-}
-</script>
-<style>
-div{
-float:left;
-width:200px;
-height:200px;
-border: solid 2px #000000;}
-</style>
-</head>
+            <div class="panel-2">
+                <div class="player">玩家 2</div>
+				<img src="Trophy.png" class="winner2">
+                <div class="score" id="player2Score">0</div>
+                <div class="box">
+                    <div class="label">分數</div>
+                    <div class="totalScore" id="total2Score">0</div>
+                </div>
+            </div>
 
-<body>
-<input type="button" name="button" id="button" value="play" onClick="playDice();">
-<div id="div01">
-<p>1</p>
-</div>
-<div id="div02">
-<p>2</p>
-</div>
-</body>
+            <button class="newGame">重設遊戲</button>
+            <button class="roll">搖骰子</button>
+
+            <img src="dice1.png" class="dice">
+        </div>
+
+        <script src="dice.js"></script>
+    </body>
 </html>

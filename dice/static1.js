@@ -6,11 +6,11 @@ app.use(async (ctx) => {
   console.log('path=', ctx.request.url.pathname)
   await send(ctx, ctx.request.url.pathname, {
     // root: `${Deno.cwd()}/public/`,
-    root: Deno.cwd()+'/game/',
+    root: Deno.cwd()+'/game',
     index: "index.html",
   });
 });
 
-console.log('start at : http://127.0.0.1:8000')
+console.log('start at : http://127.0.0.1:8088')
 console.log('cwd=', Deno.cwd())
-await app.listen({ port: 8888 });
+await app.listen({ port: 8088 });

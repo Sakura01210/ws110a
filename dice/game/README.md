@@ -1,4 +1,4 @@
-#參考資料
+# 參考資料
 [複製資料](https://github.com/chrislai0621/dice)完全複製
 
 
